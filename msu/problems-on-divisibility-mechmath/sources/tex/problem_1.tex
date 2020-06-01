@@ -1,0 +1,86 @@
+\section{Задача}
+
+\subsection*{Условие:}
+Существует ли прямоугольный треугольник с одним из катетов равным $101$?
+
+\subsection*{Решение:}
+Обозначим гипотенузу как $a$, а катеты как $b$ и $c$. Тогда по теореме Пифагора:
+
+$$
+    a^2 = b^2 + c^2
+$$
+
+\noindent пусть катет $c = 101$, тогда
+
+$$
+    a^2 = b^2 + 101^2 \quad \Rightarrow \quad a^2 - b^2 = 101^2
+$$
+
+Теперь воспользуемся формулой разности квадратов:
+
+$$
+    a^2 - b^2 = (a - b)\cdot(a + b) = 1 \cdot 101 \cdot 101
+$$
+
+Из последнего равенства следует следующая система уравнений:
+
+\begin {equation*}
+    \left[
+        \begin {array} {l} 
+            \begin {cases}
+                a - b = 1
+                \\
+                a + b = 101^2
+            \end {cases}
+            \vspace{1em} \\
+            \begin {cases}
+                a - b = 101^2
+                \\
+                a + b = 1
+            \end {cases}
+            \vspace{1em} \\
+            \begin {cases}
+                a - b = 101
+                \\
+                a + b = 101
+            \end {cases}
+        \end {array}
+    \right.
+    \longrightarrow\quad
+    \left[
+        \begin {array} {l}
+            \begin {cases}
+                a = b + 1
+                \\
+                b = \dfrac{101^2 - 1}{2} = 5100
+            \end {cases}
+            \vspace{1em} \\
+            \begin {cases}
+                a = 1 - b
+                \\
+                b = \dfrac{1 - 101^2}{2} < 0
+            \end {cases}
+            \vspace{1em} \\
+            \begin {cases}
+                a = 101 - b
+                \\
+                b = 0
+            \end {cases}
+        \end {array}
+    \right.
+\end {equation*}
+
+Случаи $2$ и $3$ не подходят, потому что стороны треугольника должны быть положительными. Из системы
+$1$ получается окончательное решение:
+
+\begin {equation*}
+    \begin {cases}
+        a = 5101
+        \\
+        b = 5100
+    \end {cases}
+\end {equation*}
+
+\subsection*{Ответ:}
+Прямоугольный треугольник с одним из катетов равным $101$ существует. Второй его катет равен
+$5100$, а гипотенуза "--- $5101$. 
